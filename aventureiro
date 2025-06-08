@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main() {
+    // Definindo número de casas para mover cada peça
+    const int casasTorre = 5;
+    const int casasBispo = 5;
+    const int casasRainha = 8;
+
+    // Movimento da Torre (for)
+    printf("Movimento da Torre (5 casas para a direita):\n");
+    for (int i = 1; i <= casasTorre; i++) {
+        printf("Direita\n");
+    }
+    printf("\n");
+
+    // Movimento do Bispo (while)
+    printf("Movimento do Bispo (5 casas na diagonal para cima e direita):\n");
+    int contadorBispo = 1;
+    while (contadorBispo <= casasBispo) {
+        printf("Cima, Direita\n");
+        contadorBispo++;
+    }
+    printf("\n");
+
+    // Movimento da Rainha (do-while)
+    printf("Movimento da Rainha (8 casas para a esquerda):\n");
+    int contadorRainha = 1;
+    do {
+        printf("Esquerda\n");
+        contadorRainha++;
+    } while (contadorRainha <= casasRainha);
+    printf("\n");
+
+    // Movimento do Cavalo: 2 casas para baixo e 1 casa para a esquerda
+    printf("Movimento do Cavalo (movimento em 'L': 2 casas para baixo, 1 para a esquerda):\n");
+
+    // Loop externo: movimenta 2 casas para baixo (for)
+    for (int i = 1; i <= 2; i++) {
+        printf("Baixo\n");
+    }
+
+    // Loop interno: movimenta 1 casa para a esquerda (while)
+    int casasEsquerda = 1;
+    int countEsquerda = 0;
+    while (countEsquerda < casasEsquerda) {
+        printf("Esquerda\n");
+        countEsquerda++;
+    }
+
+    return 0;
+}
